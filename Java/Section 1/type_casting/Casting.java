@@ -1,4 +1,4 @@
-package type_casting;
+
 
 public class Casting {
     public static void main (String args[]) {
