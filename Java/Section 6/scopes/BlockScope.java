@@ -1,4 +1,4 @@
-public class Scope {
+public class BlockScope {
     public static void main(String args[]) {
         int i = 20;
 
