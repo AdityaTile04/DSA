@@ -5,4 +5,4 @@ public class CreateArray {
 
     int numbers[] = { 1, 2, 3 }; // size = 3
     String fruits[] = { "mango", "apple", "banana" }; // size = 3
-}
+} 
