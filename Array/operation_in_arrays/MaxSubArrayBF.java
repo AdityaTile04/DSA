@@ -1,6 +1,6 @@
 package Array.operation_in_arrays;
 
-public class MaxSubArray {
+public class MaxSubArrayBF {
 
     public static void maxSubarraySum(int n[]) {
         int currSum = 0;
