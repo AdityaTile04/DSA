@@ -14,7 +14,6 @@ public class BuyAndSellStocks {
                 buyPrice = prices[i];
             }
         }
-        
         return maxProfit;
     }
 
