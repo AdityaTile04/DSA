@@ -1,7 +1,6 @@
-package Sorting;
+package Sorting_Algorithms.practice_questions;
 
-public class BubbleSort {
-
+public class Question4 {
     public static void bubbleSort(int arr[]) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
@@ -15,15 +14,11 @@ public class BubbleSort {
         }
     }
 
-    public static void printArr(int arr[]) {
+    public static void main(String[] args) {
+        int arr[] = { 3, 6, 2, 1, 8, 7, 4, 5, 3, 1 };
+        bubbleSort(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
-    }
-
-    public static void main(String args[]) {
-        int arr[] = { 5, 4, 1, 3, 2 };
-        bubbleSort(arr);
-        printArr(arr);
     }
 }
