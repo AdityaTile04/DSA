@@ -6,6 +6,7 @@ public class Strings {
         // how to declared the string
         String str = "abcd";
         String str2 = new String("abcd");
+        System.out.println(str + " " +  str2);
 
         Scanner sc = new Scanner(System.in);
 
