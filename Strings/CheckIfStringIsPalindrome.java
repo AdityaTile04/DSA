@@ -14,4 +14,4 @@ public class CheckIfStringIsPalindrome {
         String str = "madam";
         System.out.println(checkIfStringIsPalindrome(str));
     }
-}
+} 
