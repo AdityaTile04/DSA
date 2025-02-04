@@ -8,6 +8,9 @@ public class BitMainpulation  {
 
         // Binary XOR (^)
         System.out.println(5 ^ 6);
+
+        // Binary One's complement or NOT (~)
+        System.out.println(~5);
          
     }
 }
