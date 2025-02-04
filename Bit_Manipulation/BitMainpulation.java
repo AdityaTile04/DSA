@@ -5,5 +5,9 @@ public class BitMainpulation  {
 
         // Binary OR (|)
         System.out.println(5 | 6);
+
+        // Binary XOR (^)
+        System.out.println(5 ^ 6);
+         
     }
 }
