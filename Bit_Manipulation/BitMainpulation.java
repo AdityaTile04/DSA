@@ -13,7 +13,10 @@ public class BitMainpulation {
         System.out.println(~5);
 
         // Binary left shift (<<)
-        int a = 5, b = 2;
-        System.out.println(a << b); 
+        int a = 6, b = 2;
+        System.out.println(a << b);
+
+        // Binary right shift (>>)
+        System.out.println(a >> b);
     }
 }
