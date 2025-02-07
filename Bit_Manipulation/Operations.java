@@ -40,12 +40,19 @@ public class Operations {
         return n & bitMask;
     }
 
+    public static int clearBitsInRange(int n, int i, int j) {
+        int a = ((~0) << (j + 1));
+        int b = (1 << i) - 1;
+        int bitMask = a | b;
+        return n & bitMask;
+    }
+
     public static void main(String[] args) {
         System.out.println(getIthBit(5, 2));
         System.out.println(setIthBit(10, 2));
         System.out.println(clearIthBit(5, 1));
         System.out.println(updateIthBit(10, 2, 1));
         System.out.println(clearIBits(8, 2));
+        System.out.println(clearBitsInRange(5, 2, 3));
     }
 }
- 
