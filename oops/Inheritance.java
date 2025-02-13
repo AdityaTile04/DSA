@@ -16,6 +16,14 @@ public class Inheritance {
         System.out.println(m.skinColor);
         System.out.println(m.language);
 
+        Cat jerry = new Cat();
+        jerry.color = "black";
+        jerry.legs = 4;
+        jerry.meow();
+        jerry.eat();
+        System.out.println(jerry.color);
+        System.out.println(jerry.legs);
+
     }
 }
 
@@ -36,6 +44,8 @@ class Dog extends Animal {
     String breed;
 }
 
+// types of inheritance
+// 1.Single Level Inheritance
 class Human {
     String skinColor;
     String eye;
@@ -52,4 +62,14 @@ class Human {
 
 class Man extends Human {
     String language;
+}
+
+class Mammal extends Animal {
+    int legs;
+}
+
+class Cat extends Mammal {
+    void meow() {
+        System.out.println("meow");
+    }
 }
