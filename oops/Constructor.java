@@ -15,7 +15,47 @@ public class Constructor {
         System.out.println(c1.model);
         System.out.println(c2.price);
 
+        Car c4 = new Car(c1); // Creating a copy of car1
+        System.out.println(c4.color);
+        System.out.println(c4.model);
+
+        Marks m = new Marks(80, 94, 95);
+
+        System.out.println(m.physics);
+        System.out.println(m.chemistry);
+        System.out.println(m.math);
+
+        System.out.println("Using copy constructor : ");
+
+        Marks m1 = new Marks(m);
+        System.out.println(m1.physics);
+        System.out.println(m1.math);
+
+        A a = new A(10, "Aditya");
+        A b = new A(a);
+        System.out.println(b.a);
+        System.out.println(b.b);
+
     }
+}
+
+class A {
+    int a;
+    String b;
+
+    A(int a, String b) {
+        this.a = a;
+        this.b = b;
+
+        System.out.println(a + " " + b);
+    }
+
+    A(A ref) {
+        a = ref.a;
+        b = ref.b;
+
+    }
+
 }
 
 class Student {
@@ -60,4 +100,35 @@ class Car {
         this.price = price;
     }
 
+    // Copy Constructor (Takes another Car object as parameter)
+    Car(Car newCar) {
+        this.color = newCar.color;
+        this.model = newCar.model;
+        this.price = newCar.price;
+    }
+
+}
+
+// copy constructor
+class Marks {
+    int physics;
+    int chemistry;
+    int math;
+
+    // void getMarks(int phy, int chem, int math) {
+    // this.physics = phy;
+    // this.chemistry = chem;
+    // this.math = math;
+    // }
+
+    Marks(int phy, int chem, int math) {
+        this.physics = phy;
+        this.chemistry = chem;
+        this.math = math;
+    }
+
+    Marks(Marks newMarks) {
+        this.physics = newMarks.physics;
+        this.math = newMarks.math;
+    }
 }
