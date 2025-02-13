@@ -24,6 +24,19 @@ public class Inheritance {
         System.out.println(jerry.color);
         System.out.println(jerry.legs);
 
+        Fish f = new Fish();
+        Bird b = new Bird();
+
+        f.color = "red";
+        System.out.println(f.color);
+        f.eat();
+        f.swim();
+
+        b.color = "blue";
+        System.out.println(b.color);
+        b.fly();
+        b.eat();
+
     }
 }
 
@@ -64,6 +77,7 @@ class Man extends Human {
     String language;
 }
 
+// 2.Multi Level Inheritance
 class Mammal extends Animal {
     int legs;
 }
@@ -71,5 +85,19 @@ class Mammal extends Animal {
 class Cat extends Mammal {
     void meow() {
         System.out.println("meow");
+    }
+}
+
+// 3.Heirarchical Inheritance
+
+class Fish extends Animal {
+    void swim() {
+        System.out.println("swim");
+    }
+}
+
+class Bird extends Animal {
+    void fly() {
+        System.out.println("fly");
     }
 }
