@@ -1,41 +1,57 @@
 public class Inheritance {
     public static void main(String args[]) {
-        Dog labredor = new Dog();
+        // Dog labredor = new Dog();
 
-        labredor.eat();
-        labredor.bark();
-        labredor.color = "white";
-        System.out.println(labredor.color);
+        // labredor.eat();
+        // labredor.bark();
+        // labredor.color = "white";
+        // System.out.println(labredor.color);
 
-        Man m = new Man();
+        // Man m = new Man();
 
-        m.language = "English";
-        m.run();
-        m.jump();
-        m.skinColor = "white";
-        System.out.println(m.skinColor);
-        System.out.println(m.language);
+        // m.language = "English";
+        // m.run();
+        // m.jump();
+        // m.skinColor = "white";
+        // System.out.println(m.skinColor);
+        // System.out.println(m.language);
 
-        Cat jerry = new Cat();
-        jerry.color = "black";
-        jerry.legs = 4;
-        jerry.meow();
-        jerry.eat();
-        System.out.println(jerry.color);
-        System.out.println(jerry.legs);
+        // Cat jerry = new Cat();
+        // jerry.color = "black";
+        // jerry.legs = 4;
+        // jerry.meow();
+        // jerry.eat();
+        // System.out.println(jerry.color);
+        // System.out.println(jerry.legs);
 
-        Fish f = new Fish();
-        Bird b = new Bird();
+        // Fish f = new Fish();
+        // Bird b = new Bird();
 
-        f.color = "red";
-        System.out.println(f.color);
-        f.eat();
-        f.swim();
+        // f.color = "red";
+        // System.out.println(f.color);
+        // f.eat();
+        // f.swim();
 
-        b.color = "blue";
-        System.out.println(b.color);
-        b.fly();
-        b.eat();
+        // b.color = "blue";
+        // System.out.println(b.color);
+        // b.fly();
+        // b.eat();
+
+        Tuna t = new Tuna();
+        t.color();
+        t.eat();
+        t.swim();
+
+        Shark s = new Shark();
+        s.color = "black";
+        System.out.println(s.color);
+        s.swim();
+
+        Peakock p = new Peakock();
+        p.color = "purple";
+        p.eat();
+        p.fly();
+        p.feather();
 
     }
 }
@@ -99,5 +115,31 @@ class Fish extends Animal {
 class Bird extends Animal {
     void fly() {
         System.out.println("fly");
+    }
+}
+
+// 4.Hybrid Inheritance
+
+class Tuna extends Fish {
+    void color() {
+        System.out.println("grey");
+    }
+}
+
+class Shark extends Fish {
+    void teeth() {
+        System.out.println("teeth");
+    }
+}
+
+class German extends Dog {
+    void legs() {
+        System.out.println("4");
+    }
+}
+
+class Peakock extends Bird {
+    void feather() {
+        System.out.println("feather");
     }
 }
