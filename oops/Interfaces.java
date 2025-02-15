@@ -11,6 +11,42 @@ public class Interfaces {
         jasprit.bowler();
         DaleStyne dale = new DaleStyne();
         dale.bowler();
+
+        Bear b = new Bear();
+        b.eats();
+
+        Cow c = new Cow();
+        c.eats();
+
+        Lion l = new Lion();
+        l.eats();
+    }
+}
+
+// multiple inheritance
+interface Herbivore {
+    void eats();
+}
+
+interface Carnivore {
+    void eats();
+}
+
+class Cow implements Carnivore {
+    public void eats() {
+        System.out.println("eats grass");
+    }
+}
+
+class Lion implements Herbivore {
+    public void eats() {
+        System.out.println("eats meat");
+    }
+}
+
+class Bear implements Herbivore, Carnivore {
+    public void eats() {
+        System.out.println("eats grass and meat");
     }
 }
 
