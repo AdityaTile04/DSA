@@ -101,4 +101,9 @@ class Math {
     static void changeb() {
         b = a * 3;
     }
+
+    public static float sqrt(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'sqrt'");
+    }
 }
