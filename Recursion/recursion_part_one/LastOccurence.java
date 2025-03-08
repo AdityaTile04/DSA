@@ -5,11 +5,9 @@ public class LastOccurence {
             return -1;
         }
         int isFound = lastOccurence(arr, k, i + 1);
-
         if (isFound == -1 && arr[i] == k) {
             return i;
         }
-
         return isFound;
     }
 
