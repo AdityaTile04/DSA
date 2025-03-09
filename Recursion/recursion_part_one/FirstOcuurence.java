@@ -1,5 +1,4 @@
 public class FirstOcuurence {
-
     public static int firstOccurence(int[] arr, int key, int i) {
         if (i == arr.length)
             return -1;
