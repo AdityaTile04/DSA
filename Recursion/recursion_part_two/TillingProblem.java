@@ -15,6 +15,6 @@ public class TillingProblem {
     }
 
     public static void main(String args[]) {
-        System.out.println(tillingProblem(2));
+        System.out.println(tillingProblem(3));
     }
 }
