@@ -6,12 +6,7 @@ public class FriendsPairingProblem {
             return n;
         }
 
-        int single = friendsPairing(n - 1);
-        int pairs = friendsPairing(n - 2);
-
-        int ways = single += single * pairs;
-
-        return ways;
+        return friendsPairing(n - 1) + (n - 1) * friendsPairing(n - 2);
     }
 
     public static void main(String args[]) {
