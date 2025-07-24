@@ -119,6 +119,24 @@ public class Linkedlist {
         return -1; // key not found
     }
 
+    public int helper(Node head, int k) {
+        if (head == null) {
+            return -1;
+        }
+        if (head.data == k) {
+            return 0;
+        }
+        int i = helper(head.next, k);
+        if (i == -1) {
+            return -1;
+        }
+        return i + 1;
+    }
+
+    public int recursiveSearch(int k) {
+        return helper(head, k);
+    }
+
     public static void main(String[] args) {
         Linkedlist ll = new Linkedlist();
         ll.addFirst(2);
@@ -134,5 +152,8 @@ public class Linkedlist {
 
         System.out.println("key found at index: " + ll.search(4));
         System.out.println("key found at index: " + ll.search(10)); // not found return -1
+
+        System.out.println("key found at index: " + ll.recursiveSearch(4));
+        System.out.println("key found at index: " + ll.recursiveSearch(10)); // not found return -1
     }
 }
