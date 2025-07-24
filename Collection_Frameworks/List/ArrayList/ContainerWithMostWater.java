@@ -1,5 +1,4 @@
-package List;
-
+package ArrayList;
 import java.util.ArrayList;
 
 public class ContainerWithMostWater {
