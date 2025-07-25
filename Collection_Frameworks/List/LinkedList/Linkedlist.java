@@ -137,23 +137,117 @@ public class Linkedlist {
         return helper(head, k);
     }
 
+    public void reverse() {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
+    public void deleteNthfromEnd(int n) {
+        int size = 0;
+        Node temp = head;
+        while (temp != null) {
+            temp = temp.next;
+            size++;
+        }
+        if (n == size) {
+            head = head.next; // remove first
+            return;
+        }
+        int i = 1;
+        int iToF = size - n;
+        Node prev = head;
+        while (i < iToF) {
+            prev = prev.next;
+            i++;
+        }
+        prev.next = prev.next.next;
+        return;
+    }
+
+    public Node findMid(Node head) { // this is helper function
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next; // +1
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    public boolean checkPlindrome() {
+        if (head == null || head.next == null) {
+            return true;
+        }
+
+        Node midNode = findMid(head);
+
+        Node prev = null;
+        Node curr = midNode;
+        Node next;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        Node right = prev;
+        Node left = head;
+
+        while (right != null) {
+            if (left.data != right.data) {
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         Linkedlist ll = new Linkedlist();
-        ll.addFirst(2);
-        ll.addFirst(1);
-        ll.addLast(3);
-        ll.addLast(5);
-        ll.add(3, 4);
-        ll.printNode();
+        // ll.addFirst(2);
+        // ll.addFirst(1);
+        // ll.addLast(3);
+        // ll.addLast(5);
+        // ll.add(3, 4);
+        // ll.printNode();
 
         // ll.removeFirst();
         // ll.removeLast();
         // System.out.println("Size of LL is: " + ll.size);
 
-        System.out.println("key found at index: " + ll.search(4));
-        System.out.println("key found at index: " + ll.search(10)); // not found return -1
+        // System.out.println("key found at index: " + ll.search(4));
+        // System.out.println("key found at index: " + ll.search(10)); // not found
+        // return -1
 
-        System.out.println("key found at index: " + ll.recursiveSearch(4));
-        System.out.println("key found at index: " + ll.recursiveSearch(10)); // not found return -1
+        // System.out.println("key found at index: " + ll.recursiveSearch(4));
+        // System.out.println("key found at index: " + ll.recursiveSearch(10)); // not
+        // found return -1
+
+        // ll.printNode();
+        // ll.deleteNthfromEnd(3);
+        // ll.printNode();
+
+        // palindrome LL
+        ll.addLast(1);
+        ll.addLast(2);
+        ll.addLast(2);
+        // ll.addLast(1);
+
+        ll.printNode();
+        System.out.println(ll.checkPlindrome());
+
     }
 }
