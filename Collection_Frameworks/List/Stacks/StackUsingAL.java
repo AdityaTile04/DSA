@@ -2,7 +2,7 @@ package Stacks;
 
 import java.util.ArrayList;
 
-public class Stacks {
+public class StackUsingAL {
     static class Stack {
         static ArrayList<Integer> list = new ArrayList<>();
 
