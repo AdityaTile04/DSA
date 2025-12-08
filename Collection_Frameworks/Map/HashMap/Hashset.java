@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Hashset {
     public static void main(String[] args) {
-        HashSet<Integer> set = new HashSet<>();
+        Hashset<Integer> set = new Hashset<>();
 
         set.add(10);
         set.add(20);
